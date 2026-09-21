@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASQS PROFIT ZONE</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
 
+<body>
+
+<header>
+  <div class="logo">ASQS <span>PROFIT ZONE</span></div>
+  <a href="{{ channel_url }}" class="nav-btn">Join Telegram</a>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="badge">🚀 AI TRADING COMMUNITY</div>
+
+    <h1>Trade Smarter.<br><span>Learn Better.</span></h1>
+
+    <p>
+      Welcome to ASQS PROFIT ZONE — a community focused on
+      trading education, market tools and responsible learning.
+    </p>
+
+    <div class="buttons">
+      <a href="{{ channel_url }}" class="primary">
+        📢 Join Telegram
+      </a>
+
+      <a href="#tools" class="secondary">
+        Explore Tools
+      </a>
+    </div>
+  </section>
+
+  <section id="tools" class="section">
+    <h2>AI Trading Tools</h2>
+    <p class="sub">Useful tools for your trading journey</p>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Market Analysis</h3>
+        <p>Study market movements and trading setups.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🤖</div>
+        <h3>AI Tools</h3>
+        <p>Explore technology-assisted trading research.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Trading Education</h3>
+        <p>Learn concepts, strategies and risk management.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧠</div>
+        <h3>Smart Learning</h3>
+        <p>Improve your knowledge with structured resources.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="telegram">
+    <div class="telegram-icon">✈️</div>
+    <h2>Join ASQS PROFIT ZONE</h2>
+    <p>
+      Get updates, educational content and community information
+      directly through Telegram.
+    </p>
+
+    <a href="{{ channel_url }}" class="primary">
+      Join Our Telegram
+    </a>
+  </section>
+
+</main>
+
+<footer>
+  <strong>ASQS PROFIT ZONE</strong>
+  <p>Educational content only. Trading involves risk.</p>
+  <p>© 2026 ASQS Profit Zone</p>
+</footer>
+
+</body>
+</html>
