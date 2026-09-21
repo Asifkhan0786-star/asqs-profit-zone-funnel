@@ -16,7 +16,7 @@ def home():
 
 @app.get("/health")
 def health():
-    return jsonify({"status": "ok"})
+    return jsonify({"status": "ok", "service": "asqs-profit-zone-web"})
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "5000"))

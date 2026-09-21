@@ -1,1 +1,24 @@
+services:
+  - type: web
+    name: asqs-profit-zone-web
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: TELEGRAM_CHANNEL_URL
+        sync: false
+      - key: TELEGRAM_BOT_USERNAME
+        sync: false
 
+  - type: worker
+    name: asqs-profit-zone-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: TELEGRAM_CHANNEL_URL
+        sync: false

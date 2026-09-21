@@ -1,47 +1,26 @@
-# ASQS Profit Zone Funnel V2
+# ASQS PROFIT ZONE — Funnel V2
 
-Ready-to-deploy Telegram funnel:
+Website → Telegram → Bot → Membership Verification
 
-Website → Join Telegram → Telegram Bot → Membership Status
+## Render environment variables
 
-## Included
-- Flask landing page
-- Telegram bot with `/start`
-- `/status` membership check
-- Render configuration
-- Environment-variable configuration
-- Mobile-friendly design
+Web:
+- TELEGRAM_CHANNEL_URL
+- TELEGRAM_BOT_USERNAME
 
-## Required secrets
-Never commit these values to GitHub:
-- `BOT_TOKEN`
-- `CHANNEL_ID`
+Worker:
+- BOT_TOKEN
+- CHANNEL_ID
+- TELEGRAM_CHANNEL_URL
 
-Set them as environment variables in Render.
+Never commit BOT_TOKEN to GitHub.
 
 ## Telegram setup
-1. Create a bot with BotFather and copy the bot token.
-2. Add the bot to your Telegram channel as an administrator.
-3. Put the channel username or numeric ID in `CHANNEL_ID`.
-4. Set `TELEGRAM_CHANNEL_URL` to the public invite/channel URL.
 
-## Local run
-```bash
-pip install -r requirements.txt
-python app.py
-```
+1. Create the bot with BotFather.
+2. Add the bot as an administrator to your own channel.
+3. Put the channel ID in CHANNEL_ID.
+4. Put the channel/invite URL in TELEGRAM_CHANNEL_URL.
+5. Deploy the web service and worker from this repository.
 
-For the bot:
-```bash
-python bot.py
-```
-
-## Render
-The included `render.yaml` defines:
-- a web service for the landing page
-- a worker service for the Telegram bot
-
-Add the environment variables in the Render dashboard.
-
-## Important
-This project is designed for permission-based/community traffic. It does not scrape Telegram users, harvest private data, or send unsolicited bulk DMs.
+This version is permission-based. It does not scrape private-channel members or send unsolicited bulk messages.
